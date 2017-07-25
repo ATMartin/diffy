@@ -1,0 +1,11 @@
+<h3>Diff of Develop -> master</h3>
+<h4><%= @commits.count %> total commits</h4>
+<% @commits.each do |commit| %>
+  <% commit_hash = commit.split[0] %>
+  <% commit_author = commit.split[1] %>
+  <% commit_date = commit.split[2] %>
+  <% commit_message = commit.split[4..-1].join(" ") %>
+  <div class="commit">
+  <%= link_to commit_hash, "http://lab.gracehill.com/Vision/RubyVision/commit/#{commit_hash}" %> | <%= commit_message %>
+  </div>
+<% end %>
