@@ -30,3 +30,5 @@
 # Hide sensitive info.
 /config/secrets.yml
 .unicorn.sh
+/public/packs
+/node_modules
